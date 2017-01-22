@@ -8,6 +8,11 @@ soup = BeautifulSoup(this_page, "html.parser")
 
 print(soup.title.text)
 
+"""
 for link in (soup.findAll('a')):
     print(link.get('href'))
     print(link.text)
+"""
+
+for tweets in soup.findAll('div', {"class":"content"}):
+    print(tweets.find('p').text)
