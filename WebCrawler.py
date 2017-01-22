@@ -1,8 +1,9 @@
-import requests
+import urllib
+import urllib.request
 from bs4 import BeautifulSoup
 
-yellow = requests.get("http://www.yellowpages.com/search?search_terms=Coffee&geo_location_terms=Los+Angeles%2C+CA")
+url = "https://twitter.com/FordMustang"
+this_page = urllib.request.urlopen(url)
+soup = BeautifulSoup(this_page, "html.parser")
 
-text = yellow.txt
-Soup = BeautifulSoup(text)
-Soup.findAll("a")
+print(soup.title)
