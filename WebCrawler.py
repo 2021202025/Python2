@@ -14,5 +14,7 @@ for link in (soup.findAll('a')):
     print(link.text)
 """
 
+i=1
 for tweets in soup.findAll('div', {"class":"content"}):
-    print(tweets.find('p').text)
+    print(i, tweets.find('p').text)
+    i = i+1
