@@ -12,11 +12,11 @@ def make_soup(url):
 playerdatasaved = " "
 for letter in ascii_lowercase:
     soup = make_soup("http://www.basketball-reference.com/players/" + letter + "/")
-for record in soup.findAll('tr'):
-    playerdata = ""
-    for data in record.findAll('td'):
-        playerdata = playerdata+","+data.text
-    playerdatasaved = playerdatasaved + "\n" + playerdata[1:]
+    for record in soup.findAll('tr'):
+        playerdata = ""
+        for data in record.findAll('td'):
+            playerdata = playerdata+","+data.text
+        playerdatasaved = playerdatasaved + "\n" + playerdata[1:]
 
 header = "Player,From,To,Pos,Ht,Wt,Birth Date,College" + "\n"
 file = open(os.path.expanduser("Basketballtable.csv"),"wb")
