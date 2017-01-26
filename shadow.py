@@ -6,3 +6,4 @@ for i in range(int(num)):
     num_array.append(int(n))
 for i in range(int(num)):
     print (num_array[i])
+print('Arrays')
