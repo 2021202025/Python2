@@ -18,6 +18,6 @@ for record in soup.findAll('tr'):
     playerdatasaved = playerdatasaved + "\n" + playerdata[1:]
 
 header = "Player,From,To,Pos,Ht,Wt,Birth Date,College" + "\n"
-file = open(os.path.expanduser("Basketball.csv"),"wb")
+file = open(os.path.expanduser("Basketball2.csv"),"wb")
 file.write(bytes(header, encoding="ascii",errors='ignore'))
 file.write(bytes(playerdatasaved, encoding="ascii",errors='ignore'))
